@@ -17,7 +17,7 @@ int main(void)
         }
         idx++;
     }
-    printf("sum of fibonacci sequence terms whose value is even under %d: %d \n", MAX_FEBO_SEQ_TERM, sum_of_febo_seq);
+    printf("answer: %d \n", sum_of_febo_seq);
     return 1;
 }
 
