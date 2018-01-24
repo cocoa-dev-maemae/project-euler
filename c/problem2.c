@@ -18,7 +18,7 @@ int main(void)
         idx++;
     }
     printf("answer: %d \n", sum_of_febo_seq);
-    return 1;
+    return 0;
 }
 
 /**

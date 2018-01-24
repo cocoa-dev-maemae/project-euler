@@ -14,7 +14,7 @@ int main(void)
           largest_prime_factor /= prime_factor;
       }
     }
-    
+
     printf("answer: %lld \n", largest_prime_factor);
-    return 1;
+    return 0;
 }
