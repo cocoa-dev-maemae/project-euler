@@ -7,14 +7,14 @@
 int main(void)
 {
     long long int largest_prime_factor = 600851475143ll;
-    long long int num = 2ll;
+    long long int prime_factor = 2ll;
 
-    for (num; num < largest_prime_factor; num++) {
-      if (largest_prime_factor % num == 0) {
-          largest_prime_factor /= num;
+    for (prime_factor; prime_factor < largest_prime_factor; prime_factor++) {
+      if (largest_prime_factor % prime_factor == 0) {
+          largest_prime_factor /= prime_factor;
       }
     }
-    
+
     printf("answer: %lld \n", largest_prime_factor);
-    return 1;
+    return 0;
 }
