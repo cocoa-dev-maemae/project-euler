@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
-#define MIN_THREE_DIGIT_NUM 100
-#define MAX_THREE_DIGIT_NUM 999
+#define MIN_NUM 100
+#define MAX_NUM 999
 
 bool static is_palindromic_num(int p);
 
@@ -12,8 +12,8 @@ bool static is_palindromic_num(int p);
 int main(void)
 {
     int i, j, p, largest_palindromic_num = 0;
-    for (i = MIN_THREE_DIGIT_NUM; i <= MAX_THREE_DIGIT_NUM; i++) {
-        for (j = MIN_THREE_DIGIT_NUM; j <= MAX_THREE_DIGIT_NUM; j++) {
+    for (i = MIN_NUM; i <= MAX_NUM; i++) {
+        for (j = MIN_NUM; j <= MAX_NUM; j++) {
             p = i * j;
             if (is_palindromic_num(p) == 1 && p > largest_palindromic_num) {
                 largest_palindromic_num = p;
