@@ -3,7 +3,7 @@
 #define MIN_NUM 100
 #define MAX_NUM 999
 
-bool static is_palindromic_num(int p);
+static bool is_palindromic_num(int p);
 
 /**
  * A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
@@ -18,7 +18,7 @@ int main(void)
             if (is_palindromic_num(p) == 1 && p > largest_palindromic_num) {
                 largest_palindromic_num = p;
             }
-        }        
+        }
     }
 
     printf("answer: %u\n", largest_palindromic_num);
