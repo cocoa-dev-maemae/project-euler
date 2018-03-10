@@ -12,10 +12,10 @@
  */
 int main(int argc, char *argv[])
 {
-    int sum_of_square, square_of_sum, sum, num = 0;
-    for (num = MIN_NUM; num <= MAX_NUM; num++) {
-        sum_of_square += num * num;
-        sum += num;
+    int sum_of_square, square_of_sum, sum, n = 0;
+    for (n = MIN_NUM; n <= MAX_NUM; n++) {
+        sum_of_square += n * n;
+        sum += n;
     }
     square_of_sum = sum * sum;
 

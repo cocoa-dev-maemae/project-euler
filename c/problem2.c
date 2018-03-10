@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define MAX_FEBO_SEQ_TERM 4000000
+#define MAX_FEBO_SEQ 4000000
 
 /**
  * Problem2
@@ -9,15 +9,15 @@
  */
 int main(void)
 {
-    int sum_of_febo_seq = 0;
+    int sum_of_fibo = 0;
     int idx = 1;
-    while (get_fibo_seq_term(idx) < MAX_FEBO_SEQ_TERM) {
+    while (get_fibo_seq_term(idx) < MAX_FEBO_SEQ) {
         if (get_fibo_seq_term(idx) % 2 == 0) {
-            sum_of_febo_seq += get_fibo_seq_term(idx);
+            sum_of_fibo += get_fibo_seq_term(idx);
         }
         idx++;
     }
-    printf("answer: %d \n", sum_of_febo_seq);
+    printf("answer: %d \n", sum_of_fibo);
     return 0;
 }
 
