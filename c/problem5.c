@@ -2,8 +2,8 @@
 #define MIN_NUM 1
 #define MAX_NUM 20
 
-static int calc_lcm(int smallest_posi_num, int num);
-static int calc_gcm(int smallest_posi_num, int num);
+static int calc_lcm(int small_posi, int n);
+static int calc_gcm(int small_posi, int n);
 
 /**
  * 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
@@ -11,36 +11,36 @@ static int calc_gcm(int smallest_posi_num, int num);
  */
 int main(int args, char *argv[])
 {
-    int smallest_posi_num = 1;
-    int num = 0;
-    for (num = MIN_NUM; num < MAX_NUM; num++) {
-        smallest_posi_num = calc_lcm(smallest_posi_num, num);
+    int small_posi = 1;
+    int n = 0;
+    for (n = MIN_NUM; n < MAX_NUM; n++) {
+        small_posi = calc_lcm(small_posi, n);
     }
 
-    printf("answer: %d\n", smallest_posi_num);
+    printf("answer: %d\n", small_posi);
     return 0;
 }
 
 /**
  * Calculate least common multiple
  */
-int calc_lcm(int smallest_posi_num, int num)
+int calc_lcm(int small_posi, int n)
 {
-    int p = smallest_posi_num * num;
-    return p / calc_gcm(smallest_posi_num, num);
+    int p = small_posi * n;
+    return p / calc_gcm(small_posi, n);
 }
 
 /**
  * Calculate greatest common measure
  */
-int calc_gcm(int smallest_posi_num, int num)
+int calc_gcm(int small_posi, int n)
 {
-    while (smallest_posi_num != num) {
-        if (smallest_posi_num > num) {
-            smallest_posi_num = smallest_posi_num - num;
+    while (small_posi != n) {
+        if (small_posi > n) {
+            small_posi = small_posi - n;
         } else {
-            num = num - smallest_posi_num;
+            n = n - small_posi;
         }
     }
-    return smallest_posi_num;
+    return small_posi;
 }
