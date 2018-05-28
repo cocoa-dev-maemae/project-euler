@@ -11,7 +11,7 @@ static bool is_prime(int n);
 int main(int argc, char *argv)
 {
     int n, count = 1;
-    for (n; count <= 10001; n++) {
+    for (n; count <= 10001; ++n) {
         if (is_prime(n) == true) {
             count++;
         }
@@ -23,7 +23,7 @@ int main(int argc, char *argv)
 
 static bool is_prime(int n)
 {
-    if (n == 1) {
+    if (n == 0 || n == 1) {
         return false;
     }
 
