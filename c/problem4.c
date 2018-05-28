@@ -27,11 +27,11 @@ int main(void)
 
 bool static is_palindromic(int p)
 {
-    int reverse = 0;
-    int tmp = p;
-    while (tmp != 0) {
-        reverse = reverse * 10 + tmp % 10;
-        tmp /= 10;
+    int r = 0;
+    int t = p;
+    while (t != 0) {
+        r = r * 10 + t % 10;
+        t /= 10;
     }
-    return (reverse == p) ? true : false;
+    return (r == p) ? true : false;
 }
