@@ -51,12 +51,10 @@ int main(void)
         "71636269561882670428252483600823257530420752963450";
     long long int lp = 1;
     int len = sizeof(n) / sizeof(n[0]);
-    int i = 0;
-    for (i; i < (len - 13); i++) {
+    for (int i = 0; i < (len - 13); i++) {
         long long int p = 1;
-        int j = 0;
         // calculate product of 13 digits
-        for (j; j < 13; j++) {
+        for (int j = 0; j < 13; j++) {
             p *= (long long int)(n[i + j] - '0');
         }
         if (p > lp) { 
@@ -64,7 +62,7 @@ int main(void)
         } else if (p == 0) {
             continue;
         }
-	}
+    }
     printf("answer: %lld \n", lp);
     return 1;
 }
