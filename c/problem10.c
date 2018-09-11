@@ -27,7 +27,7 @@ int main(void)
             for (int j = i; (i * j) < MAX_NUM; j++) {
                 // a composite number of a prime is not a prime 
                 // change to 0 which is set as 1 in advance
-                is_prime[i * j] = 0;
+                is_prime[i * j] = false;
             }
         }
     }
