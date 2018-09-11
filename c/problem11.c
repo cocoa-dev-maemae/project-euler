@@ -61,7 +61,7 @@ void main(void) {
         for (int j = 0; j < MAX_GRID - 3; j++) {
             int h = grid[i][j] * grid[i][j + 1] * grid[i][j + 2] * grid[i][j + 3];
             int v = grid[j][i] * grid[j + 1][i] * grid[j + 2][i] * grid[j + 3][i];
-            int s1 = grid[i][j] * grid[i + 1][j + 1] * grid[i + 3][j + 3] * grid[i + 4][j + 4];
+            int s1 = grid[i][j] * grid[i + 1][j + 1] * grid[i + 2][j + 2] * grid[i + 3][j + 3];
             int s2 = grid[i][MAX_GRID - j - 1] * grid[i + 1][MAX_GRID - j - 2] * grid[i + 2][MAX_GRID - j - 3] * grid[i + 3][MAX_GRID - j - 4];
             m = max(m, max(h, max(v, max(s1, s2))));
         }
