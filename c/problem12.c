@@ -29,15 +29,25 @@ void main(void) {
 	printf("answer: %lu \n", triangle);
 }
 
+/**
+ * Any integer can be expressed as
+ * N = p1^a1 * p2^a2 * p3^a3... 
+ * where p is a distinct prime number and a is its exponent. The count of divisors D(N) can then be found by the formula
+ * D(N) = (a1 + 1) * (a2 + 1) * (a3 + 1)...
+ *
+ * For example:
+ * N = 36 = 3^2 * 2^2 = 9 * 4
+ * D(32) = (2 + 1) * (2 + 1) = 9
+ **/
 int count_divisors(long triangle) {
-	int p = 1;
+	int div_cnt = 1;
 	for (long n = 2; n <= triangle; n++) {
-		int c = 0;
+		int cnt = 0;
 		while (triangle % n == 0) {
-			c++;
+			cnt++;
 			triangle /= n;
 		}
-		p *= c + 1;
+		div_cnt *= cnt + 1;
 	}
-	return p;
+	return div_cnt;
 }
