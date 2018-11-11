@@ -8,13 +8,11 @@ int main(void)
 {
     long long int lpf = 600851475143ll;
     long long int pf = 2ll;
-
     for (pf; pf < lpf; pf++) {
       if (lpf % pf == 0) {
           lpf /= pf;
       }
     }
-
     printf("answer: %lld \n", lpf);
     return 0;
 }
