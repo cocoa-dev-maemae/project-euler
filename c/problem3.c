@@ -6,15 +6,13 @@
  */
 int main(void)
 {
-    long long int largest_prime_factor = 600851475143ll;
-    long long int prime_factor = 2ll;
-
-    for (prime_factor; prime_factor < largest_prime_factor; prime_factor++) {
-      if (largest_prime_factor % prime_factor == 0) {
-          largest_prime_factor /= prime_factor;
+    long long int largest_pf = 600851475143ll;
+    long long int pf = 2ll;
+    for (pf; pf < largest_pf; pf++) {
+      if (largest_pf % pf == 0) {
+          largest_pf /= pf;
       }
     }
-
-    printf("answer: %lld \n", largest_prime_factor);
+    printf("answer: %lld \n", largest_pf);
     return 0;
 }
