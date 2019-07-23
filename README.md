@@ -1,4 +1,4 @@
-# project_euler
+# project euler solutions
 Project euler solutions
 
 
