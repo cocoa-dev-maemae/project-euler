@@ -9,15 +9,15 @@
  */
 int main(void)
 {
-    int sum_of_fibo = 0;
+    int sum = 0;
     int i = 1;
-    while (get_fibo_seq_term(i) < MAX_FEBO_SEQ) {
-        if (get_fibo_seq_term(i) % 2 == 0) {
-            sum_of_fibo += get_fibo_seq_term(i);
+    while (get_fibo_seq(i) < MAX_FEBO_SEQ) {
+        if (get_fibo_seq(i) % 2 == 0) {
+            sum += get_fibo_seq(i);
         }
         i++;
     }
-    printf("answer: %d \n", sum_of_fibo);
+    printf("answer: %d \n", sum);
     return 0;
 }
 
@@ -25,11 +25,11 @@ int main(void)
  * Get fibonacci sequence term
  *
  */
-int get_fibo_seq_term(int i)
+int get_fibo_seq(int i)
 {
-    int first_term = 1;
+    int first = 1;
     if (i == 0 || i == 1) {
-        return first_term;
+        return first;
     }
-    return get_fibo_seq_term(i - 1) + get_fibo_seq_term(i - 2);
+    return get_fibo_seq(i - 1) + get_fibo_seq(i - 2);
 }
